@@ -29,27 +29,32 @@
             gap: 25px;
         }
         
-        /* Container da direita (links + logo) */
-        .menu-direita {
-            display: flex;
-            flex-direction: column;  /* Muda para coluna (vertical) */
-            align-items: flex-end;   /* Alinha o conteúdo à direita */
-            gap: 10px;               /* Espaço entre os links e a logo */
-        }
-        
         /* Links da direita */
         .links-direita {
             display: flex;
             gap: 25px;
         }
         
-        /* Estilo do logo */
-        .logo-direita {
-            margin-top: 5px;
+        /* Barra verde abaixo da barra preta */
+        .barra-verde {
+            background-color: #1B8C3C; /* Verde similar ao do logo do IFSP */
+            width: 100%; /* Ocupa toda a largura da tela */
+            height: 4px; /* Altura da barra verde */
+            margin: 0; /* Remove margens */
         }
         
-        .logo-direita img {
-            max-width: 150px;
+        /* Container do logo (FORA da nav, alinhado à esquerda) */
+        .logo-container {
+            max-width: 1200px;
+            margin: 20px auto 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: flex-start; /* Alinha o logo à esquerda */
+        }
+        
+        .logo-container img {
+            max-width: 300px; /* Dobro do tamanho original */
+            width: 300px;
             height: auto;
             border-radius: 8px;
         }
@@ -75,21 +80,19 @@
                 gap: 15px;
             }
             
-            .menu-esquerda, .menu-direita {
+            .menu-esquerda, .links-direita {
                 width: 100%;
-            }
-            
-            .menu-direita {
-                align-items: center;
-            }
-            
-            .links-direita {
                 flex-wrap: wrap;
                 justify-content: center;
             }
             
-            .logo-direita {
-                text-align: center;
+            .logo-container {
+                justify-content: center; /* Centraliza o logo no mobile */
+            }
+            
+            .logo-container img {
+                max-width: 200px; /* Tamanho reduzido no mobile */
+                width: 200px;
             }
         }
     </style>
@@ -100,24 +103,25 @@
             <!-- Links da ESQUERDA -->
             <div class="menu-esquerda">
                 <a href="index.html">Home</a>
-                    <a href="eventos.html">Eventos</a>
-                    <a href="contato.html">Contato</a>
-                    <a href="cursos.html">Cursos</a>
-                    <a href="entrar.html">Entrar</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="contato.html">Contato</a>
+                <a href="cursos.html">Cursos</a>
+                <a href="entrar.html">Entrar</a>
             </div>
             
-            <!-- Conteúdo da DIREITA (links + logo) -->
-            <div class="menu-direita">
-                <div class="links-direita">
-                    <a href="sobre.html">Sobre</a>
-                </div>
-                
-                <!-- Logo abaixo dos links -->
-                <div class="logo-direita">
-                    <img src="Imagens/logo.jpg" alt="Logo IFSP">
-                </div>
+            <!-- Links da DIREITA -->
+            <div class="links-direita">
+                <a href="sobre.html">Sobre</a>
             </div>
         </div>
     </nav>
+    
+    <!-- Barra verde de ponta a ponta -->
+    <div class="barra-verde"></div>
+    
+    <!-- Logo FORA da barra preta, alinhado à esquerda (abaixo do Home) -->
+    <div class="logo-container">
+        <img src="Imagens/logo.jpg" alt="Logo IFSP">
+    </div>
 </body>
 </html>
