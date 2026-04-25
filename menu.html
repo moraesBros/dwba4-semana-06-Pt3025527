@@ -19,7 +19,7 @@
             margin: 0 auto;
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Isso separa os itens (esquerda e direita) */
+            justify-content: space-between;
             padding: 0 20px;
         }
         
@@ -29,14 +29,33 @@
             gap: 25px;
         }
         
-        /* Links da direita */
+        /* Container da direita (links + logo) */
         .menu-direita {
+            display: flex;
+            flex-direction: column;  /* Muda para coluna (vertical) */
+            align-items: flex-end;   /* Alinha o conteúdo à direita */
+            gap: 10px;               /* Espaço entre os links e a logo */
+        }
+        
+        /* Links da direita */
+        .links-direita {
             display: flex;
             gap: 25px;
         }
         
-        /* Estilo para todos os links (mantém a mesma aparência) */
-        .menu-esquerda a, .menu-direita a {
+        /* Estilo do logo */
+        .logo-direita {
+            margin-top: 5px;
+        }
+        
+        .logo-direita img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        /* Estilo para todos os links */
+        .menu-esquerda a, .links-direita a {
             color: white;
             text-decoration: none;
             padding: 8px 12px;
@@ -45,7 +64,7 @@
         }
         
         /* Efeito hover para todos os links */
-        .menu-esquerda a:hover, .menu-direita a:hover {
+        .menu-esquerda a:hover, .links-direita a:hover {
             background-color: #e74c3c;
             transform: translateY(-2px);
         }
@@ -57,8 +76,20 @@
             }
             
             .menu-esquerda, .menu-direita {
+                width: 100%;
+            }
+            
+            .menu-direita {
+                align-items: center;
+            }
+            
+            .links-direita {
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+            
+            .logo-direita {
+                text-align: center;
             }
         }
     </style>
@@ -66,18 +97,25 @@
 <body>
     <nav>
         <div class="menu-container">
-            <!-- Links da ESQUERDA (Sobre fica aqui, próximo à borda) -->
+            <!-- Links da ESQUERDA -->
             <div class="menu-esquerda">
-                <a href="sobre.html">Sobre</a>
+                <a href="index.html">Home</a>
+                    <a href="eventos.html">Eventos</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="cursos.html">Cursos</a>
+                    <a href="entrar.html">Entrar</a>
             </div>
             
-            <!-- Links da DIREITA (demais links) -->
+            <!-- Conteúdo da DIREITA (links + logo) -->
             <div class="menu-direita">
-                <a href="index.html">Home</a>
-                <a href="eventos.html">Eventos</a>
-                <a href="contato.html">Contato</a>
-                <a href="cursos.html">Cursos</a>
-                <a href="entrar.html">Entrar</a>
+                <div class="links-direita">
+                    <a href="sobre.html">Sobre</a>
+                </div>
+                
+                <!-- Logo abaixo dos links -->
+                <div class="logo-direita">
+                    <img src="Imagens/logo.jpg" alt="Logo IFSP">
+                </div>
             </div>
         </div>
     </nav>
