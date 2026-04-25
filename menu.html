@@ -19,20 +19,24 @@
             margin: 0 auto;
             display: flex;
             align-items: center;
+            justify-content: space-between; /* Isso separa os itens (esquerda e direita) */
             padding: 0 20px;
         }
         
-        /* Link Sobre à esquerda */
-        .menu-container > a:first-child {
-            margin-right: auto;  /* Outra forma de fazer */
-        }
-        
-        .menu-links {
+        /* Links da esquerda */
+        .menu-esquerda {
             display: flex;
             gap: 25px;
         }
         
-        .menu-links a {
+        /* Links da direita */
+        .menu-direita {
+            display: flex;
+            gap: 25px;
+        }
+        
+        /* Estilo para todos os links (mantém a mesma aparência) */
+        .menu-esquerda a, .menu-direita a {
             color: white;
             text-decoration: none;
             padding: 8px 12px;
@@ -40,7 +44,8 @@
             border-radius: 5px;
         }
         
-        .menu-links a:hover {
+        /* Efeito hover para todos os links */
+        .menu-esquerda a:hover, .menu-direita a:hover {
             background-color: #e74c3c;
             transform: translateY(-2px);
         }
@@ -51,11 +56,7 @@
                 gap: 15px;
             }
             
-            .menu-container > a:first-child {
-                margin-right: 0;
-            }
-            
-            .menu-links {
+            .menu-esquerda, .menu-direita {
                 flex-wrap: wrap;
                 justify-content: center;
             }
@@ -65,8 +66,13 @@
 <body>
     <nav>
         <div class="menu-container">
-            <a href="sobre.html">Sobre</a>
-            <div class="menu-links">
+            <!-- Links da ESQUERDA (Sobre fica aqui, próximo à borda) -->
+            <div class="menu-esquerda">
+                <a href="sobre.html">Sobre</a>
+            </div>
+            
+            <!-- Links da DIREITA (demais links) -->
+            <div class="menu-direita">
                 <a href="index.html">Home</a>
                 <a href="eventos.html">Eventos</a>
                 <a href="contato.html">Contato</a>
