@@ -9,7 +9,7 @@
         }
         
         nav {
-            background-color: #000000;  /* FUNDO PRETO */
+            background-color: #000000;
             padding: 15px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
@@ -18,13 +18,21 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            justify-content: left;  /* coloca a direita os links */
-            align-items: left;
-            gap: 20px;  /* Espaço entre os links */
+            align-items: center;
             padding: 0 20px;
         }
         
-        .menu-container a {
+        /* Link Sobre à esquerda */
+        .menu-container > a:first-child {
+            margin-right: auto;  /* Outra forma de fazer */
+        }
+        
+        .menu-links {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .menu-links a {
             color: white;
             text-decoration: none;
             padding: 8px 12px;
@@ -32,16 +40,24 @@
             border-radius: 5px;
         }
         
-        .menu-container a:hover {
-            background-color: #333333;  /* Cinza escuro no hover */
+        .menu-links a:hover {
+            background-color: #333333;
             transform: translateY(-2px);
         }
         
-        /* Responsivo para celular */
         @media (max-width: 768px) {
             .menu-container {
                 flex-direction: column;
-                gap: 10px;
+                gap: 15px;
+            }
+            
+            .menu-container > a:first-child {
+                margin-right: 0;
+            }
+            
+            .menu-links {
+                flex-wrap: wrap;
+                justify-content: center;
             }
         }
     </style>
@@ -49,12 +65,14 @@
 <body>
     <nav>
         <div class="menu-container">
-            <a href="index.html">Home</a>
-            <a href="eventos.html">Eventos</a>
-            <a href="contato.html">Contato</a>
-            <a href="cursos.html">Cursos</a>
-            <a href="entrar.html">Entrar</a>
             <a href="sobre.html">Sobre</a>
+            <div class="menu-links">
+                <a href="index.html">Home</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="contato.html">Contato</a>
+                <a href="cursos.html">Cursos</a>
+                <a href="entrar.html">Entrar</a>
+            </div>
         </div>
     </nav>
 </body>
