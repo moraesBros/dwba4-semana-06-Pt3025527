@@ -9,7 +9,7 @@
         }
         
         nav {
-            background-color: #000000;
+            background-color: #000000;  /* FUNDO PRETO */
             padding: 15px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
@@ -18,24 +18,13 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;  /* Centraliza os links */
             align-items: center;
+            gap: 20px;  /* Espaço entre os links */
             padding: 0 20px;
         }
         
-        .logo {
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        
-        .menu-links {
-            display: flex;
-            gap: 25px;
-        }
-        
-        .menu-links a {
+        .menu-container a {
             color: white;
             text-decoration: none;
             padding: 8px 12px;
@@ -43,27 +32,16 @@
             border-radius: 5px;
         }
         
-        .menu-links a:hover {
-            background-color: #333333;
+        .menu-container a:hover {
+            background-color: #333333;  /* Cinza escuro no hover */
             transform: translateY(-2px);
-        }
-        
-        /* Estilo para link ativo (página atual) */
-        .menu-links a.ativo {
-            background-color: #e74c3c;
         }
         
         /* Responsivo para celular */
         @media (max-width: 768px) {
             .menu-container {
                 flex-direction: column;
-                gap: 15px;
-            }
-            
-            .menu-links {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
+                gap: 10px;
             }
         }
     </style>
@@ -72,13 +50,11 @@
     <nav>
         <div class="menu-container">
             <a href="index.html">Home</a>
-                <a href="eventos.html">Eventos</a>
-                <a href="contato.html">Contato</a>
-                <a href="cursos.html">Cursos</a>
-                <a href="entrar.html">Entrar</a>
-            <div class="menu-links">
-                <a href="sobre.html">Sobre</a>
-            </div>
+            <a href="eventos.html">Eventos</a>
+            <a href="contato.html">Contato</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="entrar.html">Entrar</a>
+            <a href="sobre.html">Sobre</a>
         </div>
     </nav>
 </body>
