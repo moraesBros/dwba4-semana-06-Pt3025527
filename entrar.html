@@ -1,46 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Entrar - IFSP - Pirituba</title>
-  <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon"> <!-- Adiciona o ícone de aba de navegador-->
-  <script src="js/disabling.js"></script>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <title>Entrar - IFSP - Pirituba</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        object {
+            border: none;
+            display: block;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        #cabecalho object {
+            height: 260px;         /* Altura suficiente para exibir o menu + barra verde + logo */
+        }
+        
+        footer object {
+            height: 200px;         /* Altura para o rodapé */
+        }
+        
+        main {
+            padding: 30px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: left;      /* Título alinhado à esquerda */
+            color: #000;
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+        
+        form {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        form div {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+        }
+        
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            border-color: #1B8C3C;
+            outline: none;
+            box-shadow: 0 0 5px rgba(27,140,60,0.2);
+        }
+        
+        /* Barra verde dentro do formulário */
+        .barra-verde-botao {
+            background-color: #1B8C3C;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            margin: 25px 0 15px 0;   /* Espaço acima e abaixo da barra */
+        }
+        
+        .barra-verde-botao button {
+            background-color: white;
+            color: #1B8C3C;
+            border: 2px solid white;
+            padding: 12px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 180px;
+        }
+        
+        .barra-verde-botao button:hover {
+            background-color: #1B8C3C;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        /* Link "Esqueci a senha" abaixo da barra verde */
+        .link-esqueci-senha {
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .link-esqueci-senha a {
+            color: #555;
+            text-decoration: none;
+            font-size: 0.95em;
+            transition: color 0.3s;
+        }
+        
+        .link-esqueci-senha a:hover {
+            color: #1B8C3C;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  
-  <header id="cabecalho"> <!-- Indica o cabeçalho do nosso documento-->
-    <nav>
-      <object width="100%" height="65px" data="menu.html"></object>
-    </nav>
-  
-    <img src="Imagens/Logo.jpg" alt=" " /> <!-- anexa imagem e texto alternativo-->
-    
-  </header>
-  
-  <main> <!-- indica que é o conteúdo principal dessa página -->
-		<h1>Entrar</h1>
+
+    <header id="cabecalho">
+        <!-- O menu.html já contém a barra verde com o logo -->
+        <object data="menu.html"></object>
+    </header>
+
+    <main>
+        <h1>Entrar</h1>
+        
         <form method="POST">
             <div>
                 <label for="entrar-usuario">Usuário</label>
-                <input type="text" name="usuario" id="entrar-usuario" required />
+                <input type="text" name="usuario" id="entrar-usuario" required>
             </div>
-            <br>
+            
             <div>
                 <label for="entrar-senha">Senha</label>
-                <input type="password" name="senha" id="entrar-senha" required />
+                <input type="password" name="senha" id="entrar-senha" required>
             </div>
-            <br>
-            <div>
+            
+            <!-- Barra verde com botão Entrar (DENTRO do formulário) -->
+            <div class="barra-verde-botao">
                 <button type="submit">Entrar</button>
+            </div>
+            
+            <!-- Link "Esqueci a senha" abaixo da barra verde -->
+            <div class="link-esqueci-senha">
                 <a href="#">Esqueci a senha</a>
             </div>
         </form>
-  </main>
-  
-  <footer>     
-      <object width="100%" height="200px" data="rodape.html"></object>
-  </footer>
+    </main>
+
+    <footer>
+        <object data="rodape.html"></object>
+    </footer>
 
 </body>
-
 </html>
