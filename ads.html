@@ -1,36 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>ADS - IFSP - Pirituba</title>
-<script src="js/disabling.js"></script>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
+    <title>Cursos - IFSP - Pirituba</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        object {
+            border: none;
+            display: block;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        #cabecalho object {
+            height: 260px;         /* Altura para o menu completo */
+        }
+        
+        footer object {
+            height: 200px;         /* Altura para o rodapé */
+        }
+        
+        main {
+            padding: 30px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+        
+        main p {
+            margin-bottom: 15px;
+        }
+        
+        main strong {
+            font-size: 1.2em;
+            color: #1B8C3C;
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        main em {
+            font-style: italic;
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
 
-<header id="cabecalho"> <!-- Indica o cabeçalho do nosso documento-->
-  <nav>
-    <object width="100%" height="65px" data="menu.html"></object>
-  </nav>
-  
-  <img src="Imagens/Logo.jpg" alt=" " /> <!-- anexa imagem e texto alternativo-->
-  
-</header>
+    <header id="cabecalho">
+        <object data="menu.html"></object>
+    </header>
 
-<main>
-  <p><strong>Tecnologia em Análise e Desenvolvimento de Sistemas</strong></p>
-  <br>
-  <em>Objetivo Geral:</em>
-  <br>
-  O curso de Análise e Desenvolvimento de Sistemas do câmpus São Paulo Pirituba tem como objetivo capacitar o egresso a atuar na área de Tecnologia de Informação (TI) em atividades como análise, projeto, desenvolvimento, gerenciamento e implantação de sistemas de informação computacionais. Essa capacitação é pautada pela valorização da prática e competências técnicas, tanto em análise quanto em desenvolvimento, e pela atualização diante da realidade tecnológica, de modo que o profissional seja um mediador competente entre o desenvolvimento tecnológico e a sociedade em que se insere.
-</main>
+    <main>
+        <p><strong>Tecnologia em Análise e Desenvolvimento de Sistemas</strong></p>
+        <br>
+        <em>Objetivo Geral:</em>
+        <br>
+        O curso de Análise e Desenvolvimento de Sistemas do câmpus São Paulo Pirituba tem como objetivo capacitar o egresso a atuar na área de Tecnologia de Informação (TI) em atividades como análise, projeto, desenvolvimento, gerenciamento e implantação de sistemas de informação computacionais. Essa capacitação é pautada pela valorização da prática e competências técnicas, tanto em análise quanto em desenvolvimento, e pela atualização diante da realidade tecnológica, de modo que o profissional seja um mediador competente entre o desenvolvimento tecnológico e a sociedade em que se insere.
+    </main>
 
-<footer>     
-  <object width="100%" height="200px" data="rodape.html"></object>
-</footer>
-
-
-
-
+    <footer>
+        <object data="rodape.html"></object>
+    </footer>
 
 </body>
 </html>
