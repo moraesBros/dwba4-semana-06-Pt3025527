@@ -6,36 +6,30 @@
     <title>HOME - IFSP - Pirituba</title>
     
     <style>
-        /* Remove margens padrão do navegador */
         body {
             margin: 0;
             padding: 0;
         }
 
-        /* Remove bordas e ajusta os objetos (menu e rodapé) */
         object {
             border: none;
             display: block;
             width: 100%;
-            overflow: hidden;      /* Evita barras de rolagem */
+            overflow: hidden;
         }
         
-        /* Altura suficiente para o menu (nav + barra verde + logo) */
         #cabecalho object {
-            height: 260px;         /* Ajuste fino: o menu completo cabe aqui */
+            height: 260px;
         }
         
-        /* Altura do rodapé */
         footer object {
             height: 200px;
         }
         
-        /* Centraliza textos e imagens */
         .centralizar {
             text-align: center;
         }
         
-        /* Imagens flexíveis */
         figure img {
             max-width: 100%;
             height: auto;
@@ -43,6 +37,18 @@
         
         main {
             padding: 20px;
+        }
+
+        /* Borda dupla cinza escuro com largura reduzida */
+        .borda-dupla {
+            display: block;
+            width: 90%;                   /* Largura menor que a página */
+            padding: 10px 25px;
+            border: 6px double #444;      /* Cinza escuro duplo */
+            background-color: #f9f9f9;
+            margin: 20px auto;            /* Centraliza o bloco */
+            font-weight: bold;
+            text-align: center;           /* Texto centralizado */
         }
     </style>
 </head>
@@ -61,8 +67,9 @@
         </aside>
         
         <p class="centralizar borda-dupla">
-    Aniversário do IFSP - Pirituba - Palestra Augusto Aielo
-</p>
+            Aniversário do IFSP - Pirituba - Palestra Augusto Aielo 
+        </p>
+        
         <h1 class="centralizar">Conheça os desafios de inovação</h1>
         
         <div class="centralizar">
