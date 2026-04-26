@@ -35,21 +35,21 @@
             gap: 25px;
         }
         
-        /* Barra verde abaixo da barra preta */
+        /* Barra verde com o logo dentro */
         .barra-verde {
             background-color: #1B8C3C; /* Verde similar ao do logo do IFSP */
             width: 100%; /* Ocupa toda a largura da tela */
-            height: 4px; /* Altura da barra verde */
-            margin: 0; /* Remove margens */
+            padding: 15px 0; /* Espaçamento interno vertical */
+            display: flex;
+            justify-content: flex-start; /* Alinha o conteúdo à esquerda */
         }
         
-        /* Container do logo (FORA da nav, alinhado à esquerda) */
+        /* Container do logo dentro da barra verde */
         .logo-container {
             max-width: 1200px;
-            margin: 20px auto 0 auto;
+            margin: 0 auto;
             padding: 0 20px;
-            display: flex;
-            justify-content: flex-start; /* Alinha o logo à esquerda */
+            width: 100%;
         }
         
         .logo-container img {
@@ -86,8 +86,13 @@
                 justify-content: center;
             }
             
-            .logo-container {
+            .barra-verde {
                 justify-content: center; /* Centraliza o logo no mobile */
+            }
+            
+            .logo-container {
+                display: flex;
+                justify-content: center;
             }
             
             .logo-container img {
@@ -116,12 +121,11 @@
         </div>
     </nav>
     
-    <!-- Barra verde de ponta a ponta -->
-    <div class="barra-verde"></div>
-    
-    <!-- Logo FORA da barra preta, alinhado à esquerda (abaixo do Home) -->
-    <div class="logo-container">
-        <img src="Imagens/logo.jpg" alt="Logo IFSP">
+    <!-- Barra verde com o logo dentro -->
+    <div class="barra-verde">
+        <div class="logo-container">
+            <img src="Imagens/logo.jpg" alt="Logo IFSP">
+        </div>
     </div>
 </body>
 </html>
