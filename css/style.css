@@ -123,6 +123,14 @@ img {
     height: auto;
 }
 
+/* NOVA CLASSE: imagem elíptica (bola de rugby) */
+.imagem-eliptica {
+    border-radius: 50%;       /* Cria a forma oval */
+    display: block;           /* Permite centralizar com margin */
+    margin: 0 auto;           /* Centraliza horizontalmente */
+    /* Opcional: defina largura e altura se quiser forçar proporções */
+}
+
 /* ===========================
    RESPONSIVIDADE (mobile)
    =========================== */
