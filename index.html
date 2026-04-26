@@ -6,20 +6,28 @@
     <title>HOME - IFSP - Pirituba</title>
     
     <style>
+        /* Remove margens padrão do navegador */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         /* Remove bordas e ajusta os objetos (menu e rodapé) */
         object {
             border: none;
-            display: block;       /* Garante que ocupe toda a largura */
+            display: block;
             width: 100%;
-            overflow: hidden;     /* Evita barras de rolagem extras */
+            overflow: hidden;      /* Evita barras de rolagem */
         }
         
+        /* Altura suficiente para o menu (nav + barra verde + logo) */
         #cabecalho object {
-            height: 65px;         /* Altura do menu */
+            height: 260px;         /* Ajuste fino: o menu completo cabe aqui */
         }
         
+        /* Altura do rodapé */
         footer object {
-            height: 200px;        /* Altura do rodapé */
+            height: 200px;
         }
         
         /* Centraliza textos e imagens */
@@ -27,7 +35,7 @@
             text-align: center;
         }
         
-        /* Ajusta a largura da imagem */
+        /* Imagens flexíveis */
         figure img {
             max-width: 100%;
             height: auto;
