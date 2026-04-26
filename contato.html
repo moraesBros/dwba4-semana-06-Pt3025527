@@ -47,6 +47,7 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             width: 100%;
             box-sizing: border-box;
+            margin-bottom: 0;         /* remove espaço entre form e barra */
         }
         
         fieldset {
@@ -82,35 +83,70 @@
             transition: border-color 0.3s;
         }
         
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+            margin-bottom: 0;
+            vertical-align: middle;
+        }
+        
         input:focus, select:focus, textarea:focus {
             border-color: #1B8C3C;
             outline: none;
             box-shadow: 0 0 5px rgba(27,140,60,0.2);
         }
         
-        button {
+        /* Estilo para as opções de resposta na mesma linha */
+        .opcoes-resposta {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .opcoes-resposta label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        /* Espaço entre o formulário e a primeira barra */
+        .espaco-form-barra {
+            height: 20px;
+            background-color: transparent;
+        }
+
+        /* Barra verde para botões FORA do formulário */
+        .barra-botao {
+            background-color: #1B8C3C;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            margin: 0;
+        }
+        
+        /* Segunda barra fica um pouco abaixo */
+        .barra-botao + .barra-botao {
+            margin-top: 2px;
+        }
+        
+        .barra-botao button {
+            background-color: white;
+            color: #1B8C3C;
+            border: 2px solid white;
+            padding: 14px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+        
+        .barra-botao button:hover {
             background-color: #1B8C3C;
             color: white;
-            border: none;
-            padding: 12px 25px;
-            font-size: 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-right: 10px;
-            transition: background-color 0.3s;
-        }
-        
-        button[type="reset"] {
-            background-color: #555;
-        }
-        
-        button:hover {
-            opacity: 0.9;
-        }
-        
-        .botoes {
-            text-align: center;
-            margin-top: 20px;
+            border: 2px solid white;
         }
     </style>
 </head>
@@ -123,7 +159,7 @@
     <main>
         <h1>Mande uma mensagem</h1>
         
-        <form method="POST">
+        <form id="form-contato" method="POST">
             <fieldset>
                 <legend>Seus Dados</legend>
                 
@@ -150,13 +186,34 @@
 
                 <label for="contato-mensagem">Mensagem</label>
                 <textarea name="mensagem" id="contato-mensagem" rows="5" required></textarea>
+                
+                <label>Opção de Resposta</label>
+                <div class="opcoes-resposta">
+                    <label for="opcao-telefone">
+                        <input type="checkbox" name="opcao-resposta" id="opcao-telefone" value="telefone">
+                        Telefone
+                    </label>
+                    
+                    <label for="opcao-email">
+                        <input type="checkbox" name="opcao-resposta" id="opcao-email" value="email">
+                        E-mail
+                    </label>
+                </div>
             </fieldset>
-
-            <div class="botoes">
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpar</button>
-            </div>
         </form>
+        
+        <!-- Espaço entre o formulário e a primeira barra -->
+        <div class="espaco-form-barra"></div>
+        
+        <!-- Barra verde com botão Enviar (FORA do formulário) -->
+        <div class="barra-botao">
+            <button type="button" onclick="document.getElementById('form-contato').submit();">Enviar</button>
+        </div>
+        
+        <!-- Barra verde com botão Limpar (abaixo) -->
+        <div class="barra-botao">
+            <button type="button" onclick="document.getElementById('form-contato').reset();">Limpar</button>
+        </div>
     </main>
 
     <footer>
