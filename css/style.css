@@ -1,10 +1,155 @@
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+/* ===========================
+   RESET & CONFIGURAÇÕES GERAIS
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    padding-top: 70px; /* Ajuste conforme altura do menu */
+    font-family: Arial, sans-serif;
+}
+
+/* ===========================
+   MENU (nav + barra verde)
+   =========================== */
+
+/* Faixa preta do menu */
+nav {
+    background-color: #000000;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu-esquerda {
+    display: flex;
+    gap: 25px;
+}
+
+.links-direita {
+    display: flex;
+    gap: 25px;
+}
+
+/* Links do menu */
+.menu-esquerda a,
+.links-direita a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.menu-esquerda a:hover,
+.links-direita a:hover {
+    background-color: #e74c3c;
+    transform: translateY(-2px);
+}
+
+/* Barra verde (abaixo da faixa preta) */
+.barra-verde {
+    background-color: #1B8C3C; /* verde similar ao logo do IFSP */
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Logo dentro da barra verde */
+.logo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.logo-container img {
+    max-width: 300px;   /* Tamanho dobrado conforme solicitado */
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ===========================
+   RODAPÉ
+   =========================== */
+footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #1B8C3C;
+    margin-top: 30px;
+}
+
+/* ===========================
+   ELEMENTOS GERAIS
+   =========================== */
+.centralizar {
+    text-align: center;
+}
+
+/* Remove bordas e ajusta objetos incorporados */
+object {
+    border: none;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+#cabecalho object {
+    height: auto;      /* altura definida pelo conteúdo do menu */
+}
+
+/* iframe responsivo */
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Imagens flexíveis */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===========================
+   RESPONSIVIDADE (mobile)
+   =========================== */
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-esquerda,
+    .links-direita {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .barra-verde {
+        justify-content: center;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo-container img {
+        max-width: 200px;
+        width: 200px;
+    }
 }
