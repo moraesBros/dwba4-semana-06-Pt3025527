@@ -1,45 +1,76 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <!-- configura a codificação de caracteres do navegador para o UTF-8-->
     <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
-    <!-- Adiciona o ícone de aba de navegador-->
     <title>HOME - IFSP - Pirituba</title>
-    <!-- Adiciona o título na aba do navegador-->
+    
+    <style>
+        /* Remove bordas e ajusta os objetos (menu e rodapé) */
+        object {
+            border: none;
+            display: block;       /* Garante que ocupe toda a largura */
+            width: 100%;
+            overflow: hidden;     /* Evita barras de rolagem extras */
+        }
+        
+        #cabecalho object {
+            height: 65px;         /* Altura do menu */
+        }
+        
+        footer object {
+            height: 200px;        /* Altura do rodapé */
+        }
+        
+        /* Centraliza textos e imagens */
+        .centralizar {
+            text-align: center;
+        }
+        
+        /* Ajusta a largura da imagem */
+        figure img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        main {
+            padding: 20px;
+        }
+    </style>
 </head>
-
 <body>
 
     <header id="cabecalho">
-            <object width="100%" height="65px" data="menu.html"></object>
+        <object data="menu.html"></object>
     </header>
 
     <main>
-        <!-- indica que é o conteúdo principal dessa página -->
-
         <aside>
-            <!-- indica que é um conteúdo a parte do princial, auxiliar-->
-            <p align="center"><h1>Acontece no IFSP!</h1></p>
-            <figure>
-                <img src="Imagens/SEJA_RARO.jpg" alt="Palestra Seja Raro" width="50%" height="50%">
-               
+            <h1 class="centralizar">Acontece no IFSP!</h1>
+            <figure class="centralizar">
+                <img src="Imagens/SEJA_RARO.jpg" alt="Palestra Seja Raro" style="width: 50%;">
             </figure>
         </aside>
-<p align="center">Aniversário do IFSP - Pirituba - Palestra Augusto Aielo</p>
-        <p align="center"><h1>Conheça os desáfios de inovação</h1></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5g5LQe3m8Po?si=ZEIo43CyHWXcaiZJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        <p class="centralizar">Aniversário do IFSP - Pirituba - Palestra Augusto Aielo</p>
+        
+        <h1 class="centralizar">Conheça os desafios de inovação</h1>
+        
+        <div class="centralizar">
+            <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/5g5LQe3m8Po?si=ZEIo43CyHWXcaiZJ" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+            </iframe>
+        </div>
     </main>
 
     <footer>
-        <br><br>
-        <object width="100%" height="200px" data="rodape.html"></object>
-
+        <object data="rodape.html"></object>
     </footer>
 
-
 </body>
-
 </html>
